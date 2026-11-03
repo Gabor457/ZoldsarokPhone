@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: linear-gradient(to right, rgb(3, 240, 3), rgb(26, 92, 26));
+}
+
+#logo {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+    
+.main-content {
+    display: flex;
+    align-items: stretch; /* Egyforma magasságúra nyújtja az elemeket */
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.nyitvatartas-table {
+    width: 250px;
+    flex-shrink: 0;
+    background-color: #ffffff;
+    border-collapse: collapse;
+    border: 2px solid #000000;
+}
+
+.nyitvatartas-table caption {
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 8px;
+    border: 2px solid #000000;
+}
+
+.nyitvatartas-table td {
+    padding: 6px 10px;
+    border: 1px solid #000000;
+    color: #000000;
+}
+
+.nyitvatartas-table tr td:first-child {
+    font-weight: bold;
+}
+
+
+.bolt-kep {
+    width: 320px;
+    height: 260px;
+    object-fit: cover;
+    border: 2px solid #000000;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+
+.szoveg-doboz {
+    flex: 1; 
+    height: 260px; 
+    border: 2px solid #000000;
+    border-radius: 6px;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.85); /* Kicsit fehérebb háttér, hogy jól olvasható legyen */
+    color: #000000;
+    font-size: 0.95rem;
+}
+
+.szoveg-doboz h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.szoveg-doboz p {
+    margin: 12px 0;
+}
+
+.szoveg-doboz i {
+    color: #1a5c1a; /* Sötétzöld ikonok */
+    margin-right: 8px;
+    width: 16px;
+    text-align: center;
+}
+
+.kategoriak-konteiner {
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 2px solid #000000;
+    border-radius: 8px;
+}
+
+.kategoriak-konteiner h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #1a5c1a;
+    font-size: 1.3rem;
+    border-bottom: 2px solid #1a5c1a;
+    padding-bottom: 5px;
+}
+
+
+.kategoriak-lista {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px;
+}
+
+
+.kategoria-tag {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #1a5c1a;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+
+.kategoria-tag i {
+    color: #1a5c1a;
+}
+
+
+.kategoria-tag:hover {
+    background-color: #1a5c1a;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.kategoria-tag:hover i {
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column; 
+        align-items: center;   
+    }
+
+    .nyitvatartas-table,
+    .szoveg-doboz,
+    .bolt-kep,
+    .terkep-iframe {
+        width: 100% !important; 
+        max-width: 100%;
+    }
+
+    .bolt-kep {
+        height: auto;           
+    }
+}
